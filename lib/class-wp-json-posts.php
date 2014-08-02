@@ -1540,7 +1540,8 @@ class WP_JSON_Posts {
 		// Content
 		$fields['content'] = apply_filters( 'comment_text', $comment->comment_content, $comment );
 		// $fields['content_raw'] = $comment->comment_content;
-
+		$fields['content'] = apply_filters( 'my_comment_text', $fields['content'], $comment );
+		
 		// Status
 		switch ( $comment->comment_approved ) {
 			case 'hold':

@@ -240,7 +240,7 @@ function json_output_rsd() {
 	<api name="WP-API" blogID="1" preferred="false" apiLink="<?php echo get_json_url() ?>" />
 	<?php
 }
-add_action( 'xmlrpc_rsd_apis', 'json_output_rsd' );
+// add_action( 'xmlrpc_rsd_apis', 'json_output_rsd' );
 
 /**
  * Output API link tag into page header.
@@ -256,7 +256,7 @@ function json_output_link_wp_head() {
 
 	echo "<link rel='https://github.com/WP-API/WP-API' href='" . esc_url( $api_root ) . "' />\n";
 }
-add_action( 'wp_head', 'json_output_link_wp_head', 10, 0 );
+// add_action( 'wp_head', 'json_output_link_wp_head', 10, 0 );
 
 /**
  * Send a Link header for the API.
@@ -274,7 +274,7 @@ function json_output_link_header() {
 
 	header( 'Link: <' . $api_root . '>; rel="https://github.com/WP-API/WP-API"', false );
 }
-add_action( 'template_redirect', 'json_output_link_header', 11, 0 );
+// add_action( 'template_redirect', 'json_output_link_header', 11, 0 );
 
 /**
  * Add 'show_in_json' {@see register_post_type()} argument.
